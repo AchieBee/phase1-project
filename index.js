@@ -17,37 +17,42 @@ async function fetchBooks() {
     }
 }
 
+function createBookElement(book) {
+    const bookItem = document.createElement("div");
+    bookItem.classList.add("book-item");
+
+    const bookTitle = document.createElement("h3");
+    bookTitle.textContent = book.title;
+
+    const bookAuthor = document.createElement("p");
+    bookAuthor.textContent = "Author: " + book.author;
+
+    const bookGenre = document.createElement("p");
+    bookGenre.textContent = "Genre: " + book.genre;
+
+    const bookImage = document.createElement("img");
+    bookImage.src = book.coverImageURL || "default-cover.jpg";
+    bookImage.alt = book.title;
+
+    const deleteButton = document.createElement("button");
+    deleteButton.textContent = "Delete";
+    deleteButton.onclick = () => deleteBook(book.id);
+
+    bookItem.appendChild(bookTitle);
+    bookItem.appendChild(bookAuthor);
+    bookItem.appendChild(bookGenre);
+    bookItem.appendChild(bookImage);
+    bookItem.appendChild(deleteButton);
+
+    return bookItem;
+}
+
 async function displayBooks() {
     const books = await fetchBooks();
 
     bookListElement.innerHTML = "";
     books.forEach(book => {
-        const bookItem = document.createElement("div");
-        bookItem.classList.add("book-item");
-
-        const bookTitle = document.createElement("h3");
-        bookTitle.textContent = book.title;
-
-        const bookAuthor = document.createElement("p");
-        bookAuthor.textContent = "Author: " + book.author;
-
-        const bookGenre = document.createElement("p");
-        bookGenre.textContent = "Genre: " + book.genre;
-
-        const bookImage = document.createElement("img");
-        bookImage.src = book.coverImagrURL || "default-cover.jpg";
-        bookImage.alt = book.title;
-
-        const deleteButton = document.createElement("button");
-        deleteButton.textContent = "Delete";
-        deleteButton.onclick = () => deleteBook(book.id);
-
-        bookItem.appendChild(bookTitle);
-        bookItem.appendChild(bookAuthor);
-        bookItem.appendChild(bookGenre);
-        bookItem.appendChild(bookImage);
-        bookItem.appendChild(deleteButton);
-
+        const bookItem = createBookElement(book);
         bookListElement.appendChild(bookItem);
     });
 }
@@ -63,7 +68,7 @@ async function addBook() {
             title,
             author,
             genre,
-            coverImagrURL: coverImageURL || "default-cover.jpg"
+            coverImageURL: coverImageURL || "default-cover.jpg"
         };
 
         try {
