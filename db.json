@@ -1,0 +1,74 @@
+{
+  "Books": [
+    {
+      "id": 1,
+      "title": "The Copper Peacock",
+      "author": "Ruth Rendell",
+      "genre": "Fiction",
+      "coverImagrURL": "https://img.bidorbuy.co.za/image/upload/v1680785670/user_images/374/2074374/230406145426_20230331_112528.jpg"
+    },
+    {
+      "id": 2,
+      "title": "The Rachel Riley Diaries-The Time of My Life",
+      "author": "Joanna Nadin",
+      "genre": "Fiction",
+      "coverImagrURL": "https://joannanadin.files.wordpress.com/2017/07/img_31831.jpg"
+    },
+    {
+      "Id": 3,
+      "title": "Where is Kenya?",
+      "author": "Susan Wakhungu-Githuku",
+      "genre": "History",
+      "coverImagrURL": "https://digitalcommons.law.buffalo.edu/book_sections/1216/preview.jpg"
+    },
+    {
+      "id": 4,
+      "title": "General History of Africa-V",
+      "author": "Heinemann California",
+      "genre": "History",
+      "coverImagrURL": "https://images-na.ssl-images-amazon.com/images/I/71-fNvNUgjL._AC_UL600_SR600,600_.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Storekeeping and Store control Simplified",
+      "author": "N.A Saleemi",
+      "genre": "Accounting",
+      "coverImagrURL": "https://ugandabookshop.co.ug/246/store-keeping-stock-control-simplified.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Renovating for Profit",
+      "author": "Michael Holmes",
+      "genre": "Accounting",
+      "coverImagrURL": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1320388694i/9169896.jpg"
+    },
+    {
+      "id": 7,
+      "title": "Beat Cancer",
+      "author": "Prof.Mustafa Djamgoz and Prof.Jane Plant",
+      "genre": "Medical Science",
+      "coverImagrURL": "https://cdn.penguin.co.uk/dam-assets/books/9780091947958/9780091947958-jacket-hsize.jpg"
+    },
+    {
+      "id": 8,
+      "title": "Practitioner Research in Health Care",
+      "author": "John Reed and Sue Procter",
+      "genre": "Medical Science",
+      "coverImagrURL": "https://prodimage.images-bn.com/pimages/9780412498107_p0_v3_s192x300.jpg"
+    },
+    {
+      "id": 9,
+      "title": "Dark Heart:The Shocking Truth about Hidden Britian",
+      "author": "Nick Davies",
+      "genre": "Sociology",
+      "coverImagrURL": "https://m.media-amazon.com/images/I/81yFP8KuttL._AC_UF894,1000_QL80_.jpg"
+    },
+    {
+      "id": 10,
+      "title": "The New Direction In American Politics",
+      "author": "John E.Chubb and Paul E.Peterson",
+      "genre": "Sociology",
+      "coverImagrURL": "https://m.media-amazon.com/images/I/4109-SQ4LAL._AC_SY580_.jpg"
+    }
+  ]
+}
