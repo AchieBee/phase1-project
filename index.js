@@ -1,11 +1,16 @@
 const bookListElement = document.querySelector(".book-list");
+const titleInput = document.getElementById("title");
+const authorInput = document.getElementById("author");
+const genreInput = document.getElementById("genre");
+const coverImageURLInput = document.getElementById("coverImageURL");
+
 const apiUrl = "http://localhost:3000/Books"; // Replace with your local API URL
 
 async function fetchBooks() {
     try {
         const response = await fetch(apiUrl);
         const data = await response.json();
-        return data || []; // Remove the ".Books" to fix the issue
+        return data || [];
     } catch (error) {
         console.error("Error fetching books:", error);
         return [];
@@ -48,10 +53,10 @@ async function displayBooks() {
 }
 
 async function addBook() {
-    const title = document.getElementById("title").value;
-    const author = document.getElementById("author").value;
-    const genre = document.getElementById("genre").value;
-    const coverImageURL = document.getElementById("coverImageURL").value;
+    const title = titleInput.value;
+    const author = authorInput.value;
+    const genre = genreInput.value;
+    const coverImageURL = coverImageURLInput.value;
 
     if (title && author && genre) {
         const newBook = {
@@ -72,6 +77,7 @@ async function addBook() {
 
             if (response.ok) {
                 displayBooks();
+                clearInputFields();
             } else {
                 console.error("Failed to add book:", response.status, response.statusText);
             }
@@ -89,6 +95,7 @@ async function deleteBook(id) {
 
         if (response.ok) {
             displayBooks();
+            clearInputFields();
         } else {
             console.error("Failed to delete book:", response.status, response.statusText);
         }
@@ -97,4 +104,11 @@ async function deleteBook(id) {
     }
 }
 
-displayBooks()
+function clearInputFields() {
+    titleInput.value = "";
+    authorInput.value = "";
+    genreInput.value = "";
+    coverImageURLInput.value = "";
+}
+
+displayBooks();
